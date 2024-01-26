@@ -1,4 +1,4 @@
-# oneo_order
+# News App
 
 newsApp
 
