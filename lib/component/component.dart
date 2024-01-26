@@ -1,6 +1,8 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 
-Widget buildArticleItem() => Padding(
+Widget buildArticleItem(article) => Padding(
       padding: const EdgeInsets.all(20.0),
       child: Row(
         children: [
@@ -9,8 +11,9 @@ Widget buildArticleItem() => Padding(
             height: 120,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25.0),
-                image: const DecorationImage(
-                    image: AssetImage('assets/photos/anwer.jpg'),
+                image: DecorationImage(
+                    image: NetworkImage('${article['urlToImage']}'),
+                    //image: AssetImage('assets/photos/anwar.jpg'),
                     fit: BoxFit.cover)),
           ),
           const SizedBox(
@@ -19,15 +22,15 @@ Widget buildArticleItem() => Padding(
           Expanded(
             child: Container(
               height: 120,
-              child: const Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Expanded(
                     child: Text(
-                      'title',
-                      maxLines: 4,
-                      style: TextStyle(
+                      '${article['title']}',
+                      maxLines: 3,
+                      style: const TextStyle(
                         overflow: TextOverflow.ellipsis,
                         fontSize: 18.0,
                         fontWeight: FontWeight.w600,
@@ -35,8 +38,8 @@ Widget buildArticleItem() => Padding(
                     ),
                   ),
                   Text(
-                    '2024-01-22',
-                    style: TextStyle(color: Colors.grey),
+                    '${article['publishedAt']}',
+                    style: const TextStyle(color: Colors.grey),
                   ),
                 ],
               ),
