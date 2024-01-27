@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (BuildContext context) => GetData()
-            // ..getBusiness()
+            ..getBusiness()
             ..getScience()
             ..getSports(),
         )

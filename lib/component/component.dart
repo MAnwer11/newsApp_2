@@ -12,8 +12,10 @@ Widget buildArticleItem(article) => Padding(
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25.0),
                 image: DecorationImage(
-                    image: NetworkImage('${article['urlToImage']}'),
-                    //image: AssetImage('assets/photos/anwar.jpg'),
+                    image: article['urlToImage'] != null
+                        ? NetworkImage('${article['urlToImage']}')
+                        : const NetworkImage(
+                            'https://images.unsplash.com/photo-1554080353-a576cf803bda?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGhvdG98ZW58MHx8MHx8fDA%3D'),
                     fit: BoxFit.cover)),
           ),
           const SizedBox(

@@ -12,9 +12,10 @@ class SportScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<GetData, GetDataStates>(
       builder: (context, state) {
+        var list = BlocProvider.of<GetData>(context).sports;
         if (state is NewsGetSportsLoadingState) {
           return const CircularProgressIndicator();
-        } else if (state is NewsGetSportsSuccessState) {
+        } else if (list.isNotEmpty) {
           return ListView.separated(
               physics: const BouncingScrollPhysics(),
               itemBuilder: (context, index) => buildArticleItem(

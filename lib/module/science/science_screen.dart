@@ -13,9 +13,10 @@ class ScienceScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<GetData, GetDataStates>(
       builder: (context, state) {
+        var list = BlocProvider.of<GetData>(context).science;
         if (state is NewsGetScienceLoadingState) {
           return const CircularProgressIndicator();
-        } else if (state is NewsGetScienceSuccessState) {
+        } else if (list.isNotEmpty) {
           return ListView.separated(
               physics: const BouncingScrollPhysics(),
               itemBuilder: (context, index) => buildArticleItem(
