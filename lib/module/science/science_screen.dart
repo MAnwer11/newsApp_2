@@ -5,6 +5,7 @@ import 'package:oneo_order/cubit/get_data/get_data_state.dart';
 import '../../component/component.dart';
 import '../../cubit/get_data/get_data_cubit.dart';
 
+// up
 class ScienceScreen extends StatelessWidget {
   const ScienceScreen({super.key});
 

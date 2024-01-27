@@ -1,5 +1,6 @@
 abstract class GetDataStates {}
 
+// update
 class NewsGetDataInitialStat extends GetDataStates {}
 
 class NewsGetBusinessLoadingState extends GetDataStates {}

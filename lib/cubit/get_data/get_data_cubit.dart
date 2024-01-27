@@ -17,7 +17,7 @@ class GetData extends Cubit<GetDataStates> {
       }).then((value) {
         print(value!.data.toString());
         business = value.data['articles'];
-        print(business[0]['title']);
+        //print(business[0]['title']);
         emit(NewsGetBusinessSuccessState());
       }).catchError((error) {
         print(error.toString());

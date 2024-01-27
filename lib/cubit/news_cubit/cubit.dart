@@ -14,7 +14,7 @@ class NewsCubit extends Cubit<NewsStates> {
       icon: Icon(Icons.business_center_rounded),
       label: 'Business',
     ),
-    const BottomNavigationBarItem(
+    BottomNavigationBarItem(
       icon: Icon(Icons.sports),
       label: 'Sports',
     ),

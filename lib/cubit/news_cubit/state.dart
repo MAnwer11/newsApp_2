@@ -5,3 +5,4 @@ class NewsInitialState extends NewsStates {}
 class NewsChangeThemeModeState extends NewsStates {}
 
 class NewsBottomNavState extends NewsStates {}
+// up
